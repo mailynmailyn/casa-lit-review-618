@@ -22,6 +22,7 @@
     <p>The architecture of the Wang and Brown model is split into three stages. To begin, the waveform input of speech and noise undergoes auditory periphery modeling, including cochlear frequency analysis and hair-cell simulations, resulting in auditory nerve firing patterns (Wang, 2006b). Next, correlograms and cross-channel correlations are derived to identify harmonics and formants (Wang, 2006b). The third stage consists of a two layer neural oscillator network. </p>
     <p>The first layer concerns segmentation where a time-frequency grid of oscillators performs local grouping into harmonic or formant segments. Coupling strength is higher for regions with high cross-channel correlation, encouraging synchronization of oscillators within the same harmonic or formant (Wang, 2006b). The second layer takes these time-frequency segments and globally groups into more complex auditory streams, specifically voice and noise (Wang, 2006b).
     </p>
+    <img src="images/oscillator.png" alt="" style="display: block; margin: 0 auto;" width="500px">
     <p>The model interprets oscillator activity as a time-frequency mask (regions of the time-frequency representation to disclude) and reconstructs the segregated speech signals. Overall, the model achieves performance comparable to Brown's earlier CASA system (Wang, 2006b), with improved biological plausibility using population-segregation and temporal coherence concepts.</p>
     <br>
     
@@ -45,6 +46,7 @@
     </p>
     <p>Marginal moments are measurements that describe overall distribution of values in a dataset or signal, such as mean, variance, skew or kurtosis (McDermott, 2011). Pairwise correlations are relationships between pairs of data points within a set or between different datasets, indicating how likely a variable will change in relation to another variable. In the cochlear subbands, distinguishable statistics observed were indicators of sparseness from the marginal moments, and the independent or simultaneous activation of frequencies shown in band correlations (McDermott, 2011). </p>
     <p>In the modulation bands, statistical trends involved modulation power and modulation correlation with cochlear bands. For example, the correlation of different cochlear bands with the same modulation frequency. In the waves we see high correlations only in low modulation-frequency bands, indicating that lower frequencies in these sounds tend to modulate together, producing a slow, sweeping effect across frequencies (McDermott, 2011). Fire sounds on the other hand contain high correlations across all modulation bands suggesting a more complex, dynamic texture (McDermott, 2011). </p>
+    <img src="images/correlations.png" alt="" style="display: block; margin: 0 auto;" width="500px">
     <p>Generally, when these characterizing statistics were applied to the resynthesis of the Gaussian white noise, results were perceptually accurate to their desired texture, indicating that identifying recognizable statistics may further contribute to ASA.</p>
 </body>
 </html>
