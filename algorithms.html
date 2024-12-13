@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perceptual and Neural Models: Algorithmic Approaches</title>
+</head>
+<body>
+    <h1>Perceptual and Neural Models: Algorithmic Approaches</h1>
+    <h2>Population-Separation & Temporal Coherence: Wang and Brown, 1999</h2>
+    <p>Population-Separation and Temporal Coherence are theories that explain ASA based on neurophysiological evidence (Elhilali, 2017). When sound enters the ear, the peripheral auditory system is physiologically sensitive to different physical properties of the signal. Certain frequencies activate different areas of the basilar membrane in the cochlea and the auditory system detects whether sound is coming in from the right or left ear (Elhilali, 2017).       
+    </p>
+   
+    <p>Population-Separation theory is inspired by studies that support the idea that segregated auditory streams are most confidently formed when sounds occupy separate peripheral channels (Elhilali, 2017). All the same, streams can be formed with common frequency range as a result of a difference along another acoustic dimension (timbre, bandwidth, unresolved pitch, phase, perceived spatial location) (Elhilali, 2017). In fact, if parts of a sound differ greatly in frequency and thus activate separate peripheral channels, we may still group them into a whole if the evolution from one pitch to the other is prolonged (Elhilali, 2017).
+    </p>
+   
+    <p>Temporal coherence emphasizes that stream segregation is highly impacted by relative timing between sound events (Elhilali, 2017). Neural responses in phase with each other result in a coherent perceptual stream, whereas asynchronous responses indicate separate streams (Elhilali, 2017). Feature classification from population-segregation and timing from temporal coherence together mirror Bregman’s primitive ASA grouping principles to form biological, neurological and psychological informed CASA models. 
+    </p>
+    
+    <p>Population-separation and temporal coherence theories are highlighted in the methodology of Wang and Brown’s model for speech segregation based on oscillatory correlation. The model is an integration of Wang’s earlier oscillator-based auditory streaming model and Brown’s correlogram based CASA system (Wang, 2006b). Wang’s model was biologically inspired but dealt with idealized time-frequency patterns (alternating tones) whereas Brown’s lacked physiological basis but processed real world signals (Wang, 2006b). Harnessing the biological plausibility of Wang and the real sound application of Brown, this combined model uses correlogram based analysis and neural oscillatory framework to distinguish speech from noise (Wang, 2006b).</p>
+    
+    <p>The architecture of the Wang and Brown model is split into three stages. To begin, the waveform input of speech and noise undergoes auditory periphery modeling, including cochlear frequency analysis and hair-cell simulations, resulting in auditory nerve firing patterns (Wang, 2006b). Next, correlograms and cross-channel correlations are derived to identify harmonics and formants (Wang, 2006b). The third stage consists of a two layer neural oscillator network. </p>
+    <p>The first layer concerns segmentation where a time-frequency grid of oscillators performs local grouping into harmonic or formant segments. Coupling strength is higher for regions with high cross-channel correlation, encouraging synchronization of oscillators within the same harmonic or formant (Wang, 2006b). The second layer takes these time-frequency segments and globally groups into more complex auditory streams, specifically voice and noise (Wang, 2006b).
+    </p>
+    <p>The model interprets oscillator activity as a time-frequency mask (regions of the time-frequency representation to disclude) and reconstructs the segregated speech signals. Overall, the model achieves performance comparable to Brown's earlier CASA system (Wang, 2006b), with improved biological plausibility using population-segregation and temporal coherence concepts.</p>
+    <br>
+    
+    <h2>Spatial Tuning: Chou et al, 2019</h2>
+    <p>Flexible spatial tuning has been observed in the neurons of the zebra and finch auditory cortex (Chou, 2019). This refers to a neuron’s ability to focus on sounds from specific locations (Chou, 2019). It has been observed that neurons are broadly tuned to all spatial locations when a singular sound source is present. However, with the introduction of competing sources, the neuron sharpens its spatial tuning to prioritize a target location (Chou, 2019). Spatial cues are strong components of ASA. Sound sources are coming from the same location in space (Elhilali, 2017). 
+    </p>
+
+    <p>The model designed by Chou et al. begins with a cochlear filter bank in which the signal is broken down into frequency bands (Chou, 2019). The model employs interaural time difference (ITD) and interaural level difference (ILD) cues to determine spatial sound source locations. ITD reflects the timing difference of sound arrival to the closer ear (Chou, 2019). ILD describes how the head reduces the loudness of a sound received by the more distant ear (Chou, 2019). Inspired by physiological processes observed in the animals, the model then suppresses irrelevant channels based on what is deemed a relevant location (Chou, 2019). Finally, the modified processed stimulus with suppressed off-target channels is reconstructed into a waveform (Chou, 2019).  </p>
+
+    <p>This physiologically inspired model for ASA is an impressive combination of both bottom-up and top down processes. When compared against other engineering based models, the authors concluded that the model “... can be either better or worse than the state-of-the-art engineering algorithms” however overall “... displays trends similar to human performance” (Chou, 2019).
+             
+    </p>
+
+    <br>
+
+    <h2>Statistical Reverberation Recognition: McDermott and Simoncelli, 2011
+    </h2>
+    <p>From an alternate perspective, statistics from the auditory periphery explore reverberation recognition CASA (MITCBMM, 2016). McDermott and Simoncelli investigate hypotheses about how the brain represents sound texture by synthesizing a variety of sound textures based on statistics extracted by a model inspired by physiological functions of hearing (McDermott, 2011). Sound textures, such as the sound of rainstorms, insect swarms or fire, are the collection of many similar acoustic events. Sound textures are consistent over time, thus statistically representable (McDermott, 2011). The paper’s methodology was to decompose real world textures with an auditory model containing filters tuned for sound frequencies and their modulations, proceeding to then rebuild (synthesize) based on found statistics and evaluate perceptual realism (McDermott, 2011).
+    </p>
+    <p>The sound texture model follows similar principles to general CASA architecture. The original soundwave is broken into cochlear and modulation subbands (peripheral analysis), statistics of interest include marginal moments and pairwise correlations (feature extraction and mid-level representations) and finally a Gaussian white noise sample is iteratively adjusted until it shares the statistics of a target texture (scene organization and resynthesis) (McDermott, 2011). This differs in the typical output of identified sources, however it addresses our capability to separate a sound source from reverberant influences as a result of the environment (MITCBMM, 2016). Are there statistics that our brains inherently recognize as a texture or environment that further informs sound source segregation? More simply, this paper examines the possibility of statistics informing our recognition of ambient sound sources (fire, rain, insects, etc.) (McDermott, 2011).    
+    </p>
+    <p>Marginal moments are measurements that describe overall distribution of values in a dataset or signal, such as mean, variance, skew or kurtosis (McDermott, 2011). Pairwise correlations are relationships between pairs of data points within a set or between different datasets, indicating how likely a variable will change in relation to another variable. In the cochlear subbands, distinguishable statistics observed were indicators of sparseness from the marginal moments, and the independent or simultaneous activation of frequencies shown in band correlations (McDermott, 2011). </p>
+    <p>In the modulation bands, statistical trends involved modulation power and modulation correlation with cochlear bands. For example, the correlation of different cochlear bands with the same modulation frequency. In the waves we see high correlations only in low modulation-frequency bands, indicating that lower frequencies in these sounds tend to modulate together, producing a slow, sweeping effect across frequencies (McDermott, 2011). Fire sounds on the other hand contain high correlations across all modulation bands suggesting a more complex, dynamic texture (McDermott, 2011). </p>
+    <p>Generally, when these characterizing statistics were applied to the resynthesis of the Gaussian white noise, results were perceptually accurate to their desired texture, indicating that identifying recognizable statistics may further contribute to ASA.</p>
+</body>
+</html>

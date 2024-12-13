@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASA Basics</title>
+</head>
+<body>
+    <h1>CASA Basics</h1>
+    <p>In Chapter 1: Fundamentals of Computational Auditory Scene Analysis of Computational Auditory Scene Analysis: Principles, Algorithms and Applications, Brown and Wang introduce several key concepts that are present in many CASA systems. </p>
+
+    <h2>General Architecture</h2>
+    <p>Although CASA models have varied output goals, a generalized system architecture according to Bregman’s ASA principles can be described by the following components (Wang, 2006a).
+</p>
+    <ol type="1">
+        <li>Acoustic Mixture: digitally recorded initial signal of all sources is presented to the system to be examined, grouped and segmented.</li>
+        <li>Peripheral Analysis: a time-frequency representation is developed from the acoustic mixture signal, usually in the form of a cochleagram or spectrogram.</li>
+        <li>Feature Extraction: Acoustic features such as periodicity, onsets, offsets and amplitude modulation are identified and extracted from the time-frequency representation.
+        </li>
+        <li>Mid-level Representations: More complex acoustic features are developed from previous lower-level features (ex. timbre).
+        </li>
+        <li>Scene Organization: Primitive grouping cues and schematic information (source/background models) are applied to mid-level representations and overall features to organize the audio (in its time-frequency representation) into separate streams. Thus, identifying and declaring the computational unique sound source opinion.     
+        </li>
+        <li>
+        Separated Sources: Separated sources are resynthesized into waveforms to be evaluated for perceptual correctness (via listening tests, comparisons to other examples of said sound source).
+        </li>
+
+      </ol>
+    
+      <br>
+
+    <h2>The Cochleagram, Correlogram and Cross-Correlogram </h2>
+    <p>A cochleagram is a time-frequency representation of an incoming auditory environment signal, created as a result of modelling the peripheral auditory system (Wang, 2006a). Cochleagrams are similar but differ from the more well known spectrogram. True to its name, the goal is to emphasize a frequency analysis that is accurate to human frequency selectivity in the basilar membrane and transduction by hair cells (Wang, 2006a). The basilar membrane is part of the coiled filled tube in the ear that is the cochlea. It varies in mass and stiffness along its length so that different regions of the membrane vibrate at different resonant frequencies. This is modelled as a transmission line (cascade of filters), or more commonly, by filterbank of gammatone filters (Wang, 2006a). As a result of ERB-rate spacing of filter center frequencies, cochleagrams provide a more detailed view of low frequency harmonic structures in comparison to spectrograms, thus better reflecting how the human ear perceives sound (Wang, 2006a). Each harmonic appears as a distinct peak or band instead of being merged into one broad band. Correlograms illustrate how a signal relates to itself over time, indicating periodicity. Cross-Correlograms deal with how different signals relate to each other over time, which can demonstrate synchronization (Wang, 2006a).
+
+    </p>
+
+</body>
+</html>

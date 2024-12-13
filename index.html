@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Navigation</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .sidebar ul li a:hover {
+            color: #007BFF;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            border-left: 1px solid #ccc;
+            height: 100vh;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Contents</h2>
+        <ul>
+            <li><a onclick="loadHTML('background.html')">Background</a></li>
+            <li><a onclick="loadHTML('basics.html')">CASA Basics</a></li>
+            <li><a onclick="loadHTML('algorithms.html')">Perceptual and Neural Models: Algorithmic Approaches</a></li>
+            <li><a onclick="loadHTML('conclusion.html')">Conclusion</a></li>
+            <li><a onclick="loadHTML('references.html')">References</a></li>
+        </ul>
+    </div>
+    <div id="content" class="content">
+        <h1>Computational Auditory Scene Analysis Applied to Perceptual and Neural Modelling Literature Review</h1>
+        <p>Mai Lyn Puittinen</p>
+        <p>MUMT 618</p>
+        <p>Fall 2024</p>
+    </div>
+
+    <script>
+        function loadHTML(filename) {
+            const timestamp = new Date().getTime(); // Add a unique timestamp
+            fetch(`${filename}?v=${timestamp}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('content').innerHTML = data;
+                })
+                .catch(error => {
+                    document.getElementById('content').innerHTML = `<p>Error loading content: ${error.message}</p>`;
+                });
+        }
+
+    </script>
+</body>
+</html>
